@@ -1,10 +1,10 @@
-package br.com.beardapp;
+package br.com.beardapp.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BeardappApplicationTests {
+class ServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
