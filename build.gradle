@@ -34,13 +34,14 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.named('test') {
+tasks.named("test") {
 	useJUnitPlatform()
 }
 
 test {
 	finalizedBy jacocoTestReport
 }
+
 
 
 jacoco {
@@ -54,6 +55,18 @@ tasks.jacocoTestReport {
 		xml.required = false
 		csv.required = false
 		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+	}
+
+	finalizedBy(tasks.jacocoTestCoverageVerification)
+}
+
+tasks.jacocoTestCoverageVerification{
+	violationRules{
+		rule{
+			limit{
+				minimum = "0.1".toBigDecimal()
+			}
+		}
 	}
 }
 
