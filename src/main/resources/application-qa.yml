@@ -1,0 +1,18 @@
+spring:
+
+  #DataBase
+  data:
+    mongodb:
+      uri: mongodb+srv://beardapp:PZD33NXZ40fc0f7W@cluster0.2l1afhc.mongodb.net/?retryWrites=true&w=majority
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
+
+# Server configuration
+server:
+  port: 8080
