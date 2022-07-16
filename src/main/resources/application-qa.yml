@@ -3,7 +3,9 @@ spring:
   #DataBase
   data:
     mongodb:
-      uri: mongodb+srv://beardapp:PZD33NXZ40fc0f7W@cluster0.2l1afhc.mongodb.net/?retryWrites=true&w=majority
+      uri: ${MONGO_DATABASE_URL}
+      database: ${MONGO_DATABASE_NAME}
+      auto-index-creation: true
 
 # Logger configuration
 logging:
@@ -15,4 +17,4 @@ logging:
 
 # Server configuration
 server:
-  port: 8080
+  port: ${PORT:8080}

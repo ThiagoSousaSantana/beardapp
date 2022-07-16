@@ -1,5 +1,9 @@
 spring:
 
-# Server configuration
-server:
-  port: 8080
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
