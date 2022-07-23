@@ -1,0 +1,22 @@
+spring:
+
+  #DataBase
+  data:
+    mongodb:
+      auto-index-creation: true
+      host: localhost
+      port: 27017
+      database: beardapp-db
+      authentication-database: admin
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
+
+# Server configuration
+server:
+  port: 8080

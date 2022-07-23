@@ -1,0 +1,20 @@
+spring:
+
+  #DataBase
+  data:
+    mongodb:
+      uri: ${MONGO_DATABASE_URL}
+      database: ${MONGO_DATABASE_NAME}
+      auto-index-creation: true
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: info
+    org.hibernate: debug
+
+# Server configuration
+server:
+  port: ${PORT:8080}
